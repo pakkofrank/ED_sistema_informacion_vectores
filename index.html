@@ -7,56 +7,74 @@
     <title>s</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="diseño.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
-<body id="fondo">
-    <div class="jumbotron">
-        <h1>Sistema</h1>
-        <p>Registro de articulo</p>
-    </div>
-    <div class="container-fluid">
-        <div class="row">
-            <form action="" class="col-4 chido">
-                <div class="form-group">
-                    <label for="numero">codigo</label>
-                    <input type="number" placeholder="-----" id="codigo" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" placeholder="name" id="nombre" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="sueldo">precio</label>
-                    <input type="number" placeholder="$0" id="precio" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="sueldo">cantidad</label>
-                    <input type="number" id="cantidad" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="sueldo">descripcion</label>
-                    <input type="text" id="descripcion" class="form-control">
-                </div>
-                <button type="button" id="agregar" class="btn btn-primary">Agregar</button>
+<body id="fondo" class="chido2">
+    <div class="p-5  titulo"><h1>sistema de informacion</h1></div><br>
+    <div class="row justify-content-between">
+        <!-- Formulario -->
+        <div class="col-md-3">
+            <div class="row justify-content-between">
+                <form id="form" class="col-10 needs-validation chido" novalidate>
+                    <div class="form-group">
+                        <label for="numero">codigo</label>
+                        <input type="number" placeholder="-----" id="codigo" class="form-control" required>
+                        <div class="valid-feedback">correcto</div>
+                        <div class="invalid-feedback">introduzca un</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" placeholder="name" id="nombre" class="form-control" required>
+                        <div class="invalid-feedback">campo obligatorio</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="sueldo">precio</label>
+                        <input type="number" placeholder="$0" id="precio" class="form-control">
+                        <div class="valid-feedback"> correcto</div>
+                        <div class="invalid-feedback">campo obligatorio</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="sueldo">cantidad</label>
+                        <input type="number" id="cantidad" class="form-control">
+                        <div class="valid-feedback"> correcto</div>
+                        <div class="invalid-feedback">campo obligatorio</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="sueldo">descripcion</label>
+                        <input type="text" id="descripcion" class="form-control">
+                        <div class="valid-feedback"> correcto</div>
+                        <div class="invalid-feedback">campo obligatorio</div>
+                    </div>
+                    <button id="agregar" type="button" class="btn btn-primary">
+                        Agregar
+                    </button>
+                </form>
+            </div>
+        </div>
+        <!-- Tabla -->
+        <div class="col-md-8" style="overflow: auto;height:300px">
+            <table class="table table-hover table-dark">
+                <thead>
+                    <tr>
 
-                
-            </form>
+                        <th scope="col">Numero</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">precio</th>
+                        <th scope="col">cantidad</th>
+                        <th scope="col">descripcion</th>
+                        <th scope="col">accion</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla"></tbody>
+            </table>
         </div>
     </div>
-    <table class="table col-8" id="tabla">
-        <thead>
-            <tr>
-                <th scope="col">Numero</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">precio</th>
-                <th scope="col">cantidad</th>
-                <th scope="col">descripcion</th>
-                <th scope="col">accion</th>
-            </tr>
-        </thead>
-    </table>
+    </div>
+    </div>
 
     <script src="main.js" type="module"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
