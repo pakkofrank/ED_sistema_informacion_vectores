@@ -6,18 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>s</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="diseño.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
-<body>
+<body id="fondo">
     <div class="jumbotron">
         <h1>Sistema</h1>
         <p>Registro de articulo</p>
     </div>
     <div class="container-fluid">
         <div class="row">
-            <form action="" class="col-4">
+            <form action="" class="col-4 chido">
                 <div class="form-group">
                     <label for="numero">codigo</label>
                     <input type="number" placeholder="-----" id="codigo" class="form-control">
@@ -40,20 +41,22 @@
                 </div>
                 <button type="button" id="agregar" class="btn btn-primary">Agregar</button>
 
-                <table class="table col-8" id="tabla">
-                    <thead>
-                        <tr>
-                            <th scope="col">Numero</th>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">precio</th>
-                            <th scope="col">cantidad</th>
-                            <th scope="col">descripcion</th>
-                        </tr>
-                    </thead>
-                </table>
+                
             </form>
         </div>
     </div>
+    <table class="table col-8" id="tabla">
+        <thead>
+            <tr>
+                <th scope="col">Numero</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">precio</th>
+                <th scope="col">cantidad</th>
+                <th scope="col">descripcion</th>
+                <th colspan="2">accion</th>
+            </tr>
+        </thead>
+    </table>
 
     <script src="main.js" type="module"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

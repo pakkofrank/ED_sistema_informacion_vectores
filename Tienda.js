@@ -29,6 +29,18 @@ export default class Tienda{
         this._vector.push(objProductos);
     }
 
+    buscarProducto(codigo){
+        let result = -1;
+        this._vector.forEach((producto, index) => {
+            if(producto.codigo === codigo){
+                result = index;
+                return;
+            }
+        });
+        return result;
+
+    }
+
     agregarProducto(producto){
         this._agregar(producto);
         Swal.fire({
